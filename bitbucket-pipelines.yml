@@ -1,0 +1,20 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          deployment: Production
+          image: node:14.6.0
+          name: Deploy to FTP
+          caches:
+            - node
+          script:
+            - apt-get update && apt-get install -y zip
+            - yarn install
+            - yarn build
+            - pipe: atlassian/ftp-deploy:0.2.3
+              variables:
+                USER: $FTP_USER
+                PASSWORD: $FTP_PASSWORD
+                SERVER: $FTP_HOST
+                REMOTE_PATH: $FTP_PATH
+                LOCAL_PATH: $LOCAL_PATH
