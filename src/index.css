@@ -3,3 +3,37 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.8);
+	position: relative;
+	z-index: 0;
+	padding: 0 5px;
+}
+
+a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	max-width: 0;
+	left: 0;
+	z-index: -1;
+	background: #cc000077;
+	height: 10px;
+	border-radius: 20px;
+	transform: rotate(-3deg);
+	transition: max-width 0.25s ease-in-out;
+}
+a:hover:after,
+a.active:after {
+	max-width: 100%;
+	width: 100%;
+}
