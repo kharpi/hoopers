@@ -8,6 +8,7 @@ export const FooterWrapper = styled.footer`
 	margin-top: 40px;
 	img {
 		max-height: 200px;
+		max-width: 100%;
 		margin: 30px 0;
 	}
 	& > div {

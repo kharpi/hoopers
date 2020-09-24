@@ -100,7 +100,7 @@ export const HamburgerMenu = styled.div`
 	background: ${theme.colors.primary};
 	width: 100vw;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 9;
