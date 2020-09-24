@@ -37,3 +37,31 @@ a.active:after {
 	max-width: 100%;
 	width: 100%;
 }
+
+.crop-top-right img {
+	-webkit-clip-path: polygon(0 0, 100% 30px, 100% 100%, 0 calc(100% - 30px));
+	clip-path: polygon(0 0, 100% 30px, 100% 100%, 0 calc(100% - 30px));
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.crop-top-right img {
+	-webkit-clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 calc(100% - 20px));
+	clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 calc(100% - 20px));
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	max-width: 100%;
+}
+
+.no-crop img {
+	max-width: 100%;
+	border-radius: 20px;
+}
+
+.crop-top-left img {
+	max-width: 100%;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	-webkit-clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 calc(100% - 20px));
+	clip-path: polygon(0 20px, 100% 0, 100% calc(100% - 20px), 0 100%);
+}
