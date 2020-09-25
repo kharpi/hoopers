@@ -32,7 +32,7 @@ const ButtonStyle = styled.div`
 				border-top-left-radius: 20px;
 				border-bottom-right-radius: 20px;
 				background: ${theme.colors.opacity_black};
-				a:hover {
+				a {
 					color: ${theme.colors.primary};
 				}
 			}

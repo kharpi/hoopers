@@ -15,6 +15,14 @@ export const HeroWrapper = styled.div`
 			&:hover  {
 				transform: scale(1.3);
 			}
+			@media (max-width: 992px) {
+				left: 50%;
+				transform: translateX(-50%);
+				max-width: fit-content;
+				&:hover {
+					transform: translateX(-50%);
+				}
+			}
 		}
 	}
 `;
