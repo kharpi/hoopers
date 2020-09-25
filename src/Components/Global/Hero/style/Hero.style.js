@@ -18,7 +18,10 @@ export const HeroWrapper = styled.div`
 			@media (max-width: 992px) {
 				left: 50%;
 				transform: translateX(-50%);
-				max-width: fit-content;
+				max-width: 100%;
+				width: 100%;
+				max-height: calc(100vw / 2 - 20px);
+				height: auto;
 				&:hover {
 					transform: translateX(-50%);
 				}
