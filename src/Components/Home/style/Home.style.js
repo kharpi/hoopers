@@ -8,6 +8,7 @@ export const ThreeColItem = styled.div`
 	align-items: center;
 	justify-content: center;
 	padding: 0 20px;
+	margin: 30px 0;
 	.icon {
 		display: flex;
 		align-items: center;

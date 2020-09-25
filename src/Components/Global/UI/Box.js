@@ -38,7 +38,7 @@ const BoxWrapper = styled.div`
 	${(props) =>
 		props.finisher
 			? css`
-					border-bottom-right-radius: 0;
+					border-bottom-right-radius: 20px;
 			  `
 			: css`
 					&:after {
