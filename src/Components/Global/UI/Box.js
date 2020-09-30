@@ -13,6 +13,7 @@ const BoxWrapper = styled.div`
 				props.finisher
 					? css`
 							margin-top: 80px;
+							color: white;
 					  `
 					: css`
 							margin: 80px 0;
