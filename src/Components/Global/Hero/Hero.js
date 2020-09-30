@@ -13,7 +13,7 @@ const Hero = ({ img, text, cta, btn_txt }) => {
 				</div>
 				<HeroText>
 					{text}
-					<Button cta={cta} btn_txt={btn_txt} type='primary' />
+					{cta ? <Button cta={cta} btn_txt={btn_txt} type='primary' /> : null}
 				</HeroText>
 			</HeroWrapper>
 		</Box>

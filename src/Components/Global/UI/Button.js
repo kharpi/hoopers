@@ -57,9 +57,15 @@ const ButtonStyle = styled.div`
 const Button = ({ cta, btn_txt, type, section }) => {
 	return (
 		<ButtonStyle type={type}>
-			<Link to={{ pathname: { cta }, query: { tab: { section } } }}>
-				{btn_txt}
-			</Link>
+			{cta.target ? (
+				<a href={'' + cta.url} target='_blank' rel='noopener noreferrer'>
+					{btn_txt}
+				</a>
+			) : (
+				<Link to={{ pathname: { cta }, query: { tab: { section } } }}>
+					{btn_txt}
+				</Link>
+			)}
 		</ButtonStyle>
 	);
 };
