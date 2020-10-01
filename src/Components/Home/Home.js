@@ -70,12 +70,12 @@ const Home = () => {
 			<Box color={theme.colors.primary}>
 				<OurHouse>
 					<Grid container spacing={2}>
-						<Grid item xs='12' sm='6'>
+						<Grid item xs={12} sm={6}>
 							<div className='crop-top-right'>
 								<img src={PlaceholderImg} alt='' />
 							</div>
 						</Grid>
-						<Grid item xs='12' sm='6'>
+						<Grid item xs={12} sm={6}>
 							<div className='title'>Szállásunkról</div>
 							<div className='desc'>
 								A Hooper's vendégház 2020 január óta várja vendégeit igényesen
