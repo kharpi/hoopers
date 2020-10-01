@@ -43,4 +43,10 @@ export const HeroText = styled.div`
 	font-weight: bold;
 	font-size: 30px;
 	text-align: center;
+	@media (max-width: 992px) {
+		font-size: 25px;
+	}
+	@media (max-width: 768px) {
+		font-size: 20px;
+	}
 `;

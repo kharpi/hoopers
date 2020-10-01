@@ -3,6 +3,7 @@ import { HeroWrapper, HeroText } from './style/Hero.style';
 import Button from '../UI/Button';
 import Box from '../UI/Box';
 import { theme } from '../../../theme';
+import HTMLParser from 'html-react-parser';
 
 const Hero = ({ img, text, cta, btn_txt }) => {
 	return (
@@ -12,7 +13,7 @@ const Hero = ({ img, text, cta, btn_txt }) => {
 					<img src={img} alt='' />
 				</div>
 				<HeroText>
-					{text}
+					{HTMLParser(text)}
 					{cta ? <Button cta={cta} btn_txt={btn_txt} type='primary' /> : null}
 				</HeroText>
 			</HeroWrapper>
