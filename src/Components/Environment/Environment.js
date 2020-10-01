@@ -6,8 +6,16 @@ import Box from '../Global/UI/Box';
 import { theme } from '../../theme';
 import KMLine from './KMLine';
 import { Grid } from '@material-ui/core';
+import NavbarContext from '../../Context/Navbar/navbarContext';
 
 const Environment = () => {
+	const navbarContext = React.useContext(NavbarContext);
+	const { set_active } = navbarContext;
+	React.useEffect(() => {
+		set_active(3);
+		//eslint-disable-next-line
+	}, []);
+
 	return (
 		<EnvWrapper>
 			<Hero

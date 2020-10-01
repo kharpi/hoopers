@@ -61,10 +61,10 @@ const Button = ({ cta, btn_txt, type, section }) => {
 				<a href={'' + cta.url} target='_blank' rel='noopener noreferrer'>
 					{btn_txt}
 				</a>
+			) : section ? (
+				<Link to={`${cta}#${section}`}>{btn_txt}</Link>
 			) : (
-				<Link to={{ pathname: { cta }, query: { tab: { section } } }}>
-					{btn_txt}
-				</Link>
+				<Link to={`/${cta}`}>{btn_txt}</Link>
 			)}
 		</ButtonStyle>
 	);
