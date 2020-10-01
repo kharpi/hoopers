@@ -31,7 +31,7 @@ const BoxWrapper = styled.div`
 				position: absolute;
 				width: 100%;
 				height: 50px;
-				top: -50px;
+				top: -49px;
 				clip-path: polygon(100% 0, 20px 100%, 100% 100%);
 				background: ${(props) => props.color};
 			}
@@ -47,7 +47,7 @@ const BoxWrapper = styled.div`
 						position: absolute;
 						width: 100%;
 						height: 50px;
-						bottom: -50px;
+						bottom: -49px;
 						clip-path: polygon(calc(100% - 20px) 0, 0 0, 0 100%);
 						background: ${(props) => props.color};
 					}
