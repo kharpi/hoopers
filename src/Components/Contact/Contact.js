@@ -19,7 +19,7 @@ import axios from 'axios';
 import Box from '../Global/UI/Box';
 import { theme } from '../../theme';
 import Hero from '../Global/Hero/Hero';
-import HeroImg from '../../Assets/Home/hero.jpg';
+import HeroImg from '../../Assets/kp-2.jpg';
 import NavbarContext from '../../Context/Navbar/navbarContext';
 
 const Contact = () => {
@@ -175,13 +175,13 @@ const Contact = () => {
 												/>
 											</ContactFieldContainer>
 											<SendingButton type='submit'>
-												{!sending ? (
+												{sent ? (
+													'Üzeneted megkaptuk!'
+												) : !sending ? (
 													<>
 														üzenet küldése &nbsp;
 														<SendRoundedIcon />
 													</>
-												) : sent ? (
-													'Üzeneted megkaptuk!'
 												) : (
 													<CircularProgress />
 												)}

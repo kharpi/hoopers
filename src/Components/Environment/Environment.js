@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../Global/Hero/Hero';
 import { EnvWrapper } from './style/Environment.style';
-import HeroImg from '../../Assets/Home/hero.jpg';
+import HeroImg from '../../Assets/environment_hero.jpg';
 import Box from '../Global/UI/Box';
 import { theme } from '../../theme';
 import KMLine from './KMLine';
@@ -32,7 +32,7 @@ const Environment = () => {
 					<Grid item xs={12} md={6}>
 						<KMLine size={0.7} text='Egri Bazilika' />
 						<KMLine size={0.8} text='Csillagászati Múzeum és Camera Obscura' />
-						<KMLine size={0.8} text='Egri líceum' />
+						<KMLine size={0.8} text='Egri Líceum' />
 						<KMLine size={0.8} text='Dobó Tér' />
 						<KMLine size={1.1} text='Egri Vár' />
 						<KMLine size={1.1} text='Szépasszony-völgy' />
