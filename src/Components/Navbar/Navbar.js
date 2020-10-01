@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {
 	NavbarWrapper,
@@ -8,30 +8,12 @@ import {
 import NavLogo from '../../Assets/hooper2.png';
 import MobileLogo from '../../Assets/hooper.png';
 import { Container } from '@material-ui/core';
+import NavbarContext from '../../Context/Navbar/navbarContext';
 
 const Navbar = () => {
-	const [active, set_active] = useState(0);
+	const navbarContext = useContext(NavbarContext);
+	const { active } = navbarContext;
 	const [hamburger, set_hamburger] = useState(false);
-
-	useEffect(() => {
-		const path = window.location.pathname.split('/')[1];
-		switch (path) {
-			case '':
-				set_active(1);
-				break;
-			case 'szobaink':
-				set_active(2);
-				break;
-			case 'kornyezet':
-				set_active(3);
-				break;
-			case 'kapcsolat':
-				set_active(4);
-				break;
-			default:
-				set_active(0);
-		}
-	}, []);
 
 	useEffect(() => {
 		var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
@@ -97,38 +79,22 @@ const Navbar = () => {
 				</div>
 				<ul>
 					<li>
-						<Link
-							to='/'
-							className={active === 1 ? 'active' : ''}
-							onClick={() => set_active(1)}
-						>
+						<Link to='/' className={active === 1 ? 'active' : ''}>
 							Kezdőlap
 						</Link>
 					</li>
 					<li>
-						<Link
-							to='/szobaink'
-							className={active === 2 ? 'active' : ''}
-							onClick={() => set_active(2)}
-						>
+						<Link to='/szobaink' className={active === 2 ? 'active' : ''}>
 							Szobáink
 						</Link>
 					</li>
 					<li>
-						<Link
-							to='/kornyezet'
-							className={active === 3 ? 'active' : ''}
-							onClick={() => set_active(3)}
-						>
+						<Link to='/kornyezet' className={active === 3 ? 'active' : ''}>
 							Környezet
 						</Link>
 					</li>
 					<li>
-						<Link
-							to='/kapcsolat'
-							className={active === 4 ? 'active' : ''}
-							onClick={() => set_active(4)}
-						>
+						<Link to='/kapcsolat' className={active === 4 ? 'active' : ''}>
 							Kapcsolat
 						</Link>
 					</li>
@@ -146,7 +112,6 @@ const Navbar = () => {
 									to='/'
 									className={active === 1 ? 'active' : ''}
 									onClick={() => {
-										set_active(1);
 										set_hamburger(false);
 									}}
 								>
@@ -158,7 +123,6 @@ const Navbar = () => {
 									to='/szobaink'
 									className={active === 2 ? 'active' : ''}
 									onClick={() => {
-										set_active(2);
 										set_hamburger(false);
 									}}
 								>
@@ -170,7 +134,6 @@ const Navbar = () => {
 									to='/kornyezet'
 									className={active === 3 ? 'active' : ''}
 									onClick={() => {
-										set_active(3);
 										set_hamburger(false);
 									}}
 								>
@@ -182,7 +145,6 @@ const Navbar = () => {
 									to='/kapcsolat'
 									className={active === 4 ? 'active' : ''}
 									onClick={() => {
-										set_active(4);
 										set_hamburger(false);
 									}}
 								>
