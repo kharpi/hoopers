@@ -91,7 +91,7 @@ const Contact = () => {
 								try {
 									setSending(true);
 									const res = await axios({
-										method: 'GET',
+										method: 'POST',
 										url: 'http://api.hoopers.tamaskarpati.hu/contact',
 										headers: { 'Content-Type': 'multipart/form-data' },
 										data: ContactFormData,
