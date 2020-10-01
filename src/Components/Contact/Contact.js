@@ -19,12 +19,13 @@ import axios from 'axios';
 import Box from '../Global/UI/Box';
 import { theme } from '../../theme';
 import Hero from '../Global/Hero/Hero';
-import HeroImg from '../../Assets/Home/hero.jpg';
+import HeroImg from '../../Assets/kp-2.jpg';
 import NavbarContext from '../../Context/Navbar/navbarContext';
 
 const Contact = () => {
 	const navbarContext = React.useContext(NavbarContext);
 	const [sending, setSending] = useState(false);
+	const [sent, setSent] = useState(false);
 	const { set_active } = navbarContext;
 	React.useEffect(() => {
 		set_active(4);
@@ -91,13 +92,14 @@ const Contact = () => {
 								try {
 									setSending(true);
 									const res = await axios({
-										method: 'GET',
+										method: 'POST',
 										url: 'http://api.hoopers.tamaskarpati.hu/contact',
 										headers: { 'Content-Type': 'multipart/form-data' },
 										data: ContactFormData,
 									});
 									if (res.status === 200) {
 										setSending(false);
+										setSent(true);
 										actions.setSubmitting(false);
 									}
 								} catch (error) {
@@ -173,7 +175,9 @@ const Contact = () => {
 												/>
 											</ContactFieldContainer>
 											<SendingButton type='submit'>
-												{!sending ? (
+												{sent ? (
+													'Üzeneted megkaptuk!'
+												) : !sending ? (
 													<>
 														üzenet küldése &nbsp;
 														<SendRoundedIcon />

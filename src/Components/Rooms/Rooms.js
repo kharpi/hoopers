@@ -4,9 +4,16 @@ import { Link } from 'react-router-dom';
 import { RoomsWrapper, RoomBox } from './style/Rooms.style';
 import OwlCarousel from 'react-owl-carousel2';
 import '../../../node_modules/react-owl-carousel2/lib/styles.css';
-import HaromAgyas from '../../Assets/Home/haromagyas.jpg';
-import NegyAgyas from '../../Assets/Home/negyagyas.jpg';
+import HaromAgyas1 from '../../Assets/Rooms/Three/haromagyas1.jpg';
+import HaromAgyas2 from '../../Assets/Rooms/Three/haromagyas2.jpg';
+import HaromAgyas3 from '../../Assets/Rooms/Three/haromagyas3.jpg';
+import HaromAgyas4 from '../../Assets/Rooms/Three/haromagyas4.jpg';
+import MainImg1 from '../../Assets/Rooms/minpic1.jpg';
+import MainImg2 from '../../Assets/Rooms/minpic2.jpg';
+import MainImg3 from '../../Assets/Rooms/minpic3.jpg';
+import MainImg4 from '../../Assets/Rooms/minpic4.jpg';
 import OtAgyas from '../../Assets/Home/otagyas.jpg';
+import NegyAgyas from '../../Assets/Home/negyagyas.jpg';
 import NavbarContext from '../../Context/Navbar/navbarContext';
 
 const Rooms = () => {
@@ -39,10 +46,14 @@ const Rooms = () => {
 			<RoomTabs handleChange={handleChange} value={value} />
 			<RoomBox className={`${value === 1 && 'active'}`}>
 				<OwlCarousel options={options} className='owl-carousel'>
-					<img src={HaromAgyas} alt='' />
-					<img src={HaromAgyas} alt='' />
-					<img src={HaromAgyas} alt='' />
-					<img src={HaromAgyas} alt='' />
+					<img src={HaromAgyas1} alt='' />
+					<img src={HaromAgyas2} alt='' />
+					<img src={HaromAgyas3} alt='' />
+					<img src={HaromAgyas4} alt='' />
+					<img src={MainImg1} alt='' />
+					<img src={MainImg2} alt='' />
+					<img src={MainImg3} alt='' />
+					<img src={MainImg4} alt='' />
 				</OwlCarousel>
 				<div className='roomtext'>
 					<p>
@@ -70,16 +81,21 @@ const Rooms = () => {
 						találja.
 					</p>
 					<p>&nbsp;</p>
-					<p>Bejelentkezés: 15:00-18:00</p>
-					<p>Kijelentkezés: 8:00-10:00</p>
+					<p>
+						<strong>Bejelentkezés:</strong> 15:00-18:00
+					</p>
+					<p>
+						<strong>Kijelentkezés:</strong> 8:00-10:00
+					</p>
 				</div>
 			</RoomBox>
 			<RoomBox className={`${value === 2 && 'active'}`}>
 				<OwlCarousel options={options} className='owl-carousel'>
 					<img src={NegyAgyas} alt='' />
-					<img src={NegyAgyas} alt='' />
-					<img src={NegyAgyas} alt='' />
-					<img src={NegyAgyas} alt='' />
+					<img src={MainImg1} alt='' />
+					<img src={MainImg2} alt='' />
+					<img src={MainImg3} alt='' />
+					<img src={MainImg4} alt='' />
 				</OwlCarousel>
 				<div className='roomtext'>
 					<p>
@@ -107,16 +123,21 @@ const Rooms = () => {
 						találja.
 					</p>
 					<p>&nbsp;</p>
-					<p>Bejelentkezés: 15:00-18:00</p>
-					<p>Kijelentkezés: 8:00-10:00</p>
+					<p>
+						<strong>Bejelentkezés:</strong> 15:00-18:00
+					</p>
+					<p>
+						<strong>Kijelentkezés:</strong> 8:00-10:00
+					</p>
 				</div>
 			</RoomBox>
 			<RoomBox className={`${value === 3 && 'active'}`}>
 				<OwlCarousel options={options} className='owl-carousel'>
 					<img src={OtAgyas} alt='' />
-					<img src={OtAgyas} alt='' />
-					<img src={OtAgyas} alt='' />
-					<img src={OtAgyas} alt='' />
+					<img src={MainImg1} alt='' />
+					<img src={MainImg2} alt='' />
+					<img src={MainImg3} alt='' />
+					<img src={MainImg4} alt='' />
 				</OwlCarousel>
 				<div className='roomtext'>
 					<p>
@@ -144,8 +165,12 @@ const Rooms = () => {
 						találja.
 					</p>
 					<p>&nbsp;</p>
-					<p>Bejelentkezés: 15:00-18:00</p>
-					<p>Kijelentkezés: 8:00-10:00</p>
+					<p>
+						<strong>Bejelentkezés:</strong> 15:00-18:00
+					</p>
+					<p>
+						<strong>Kijelentkezés:</strong> 8:00-10:00
+					</p>
 				</div>
 			</RoomBox>
 		</RoomsWrapper>
