@@ -15,6 +15,7 @@ const ScrollTopWrapper = styled.div`
 	box-shadow: 0 0 10px 2px black;
 	display: grid;
 	place-items: center;
+	cursor: pointer;
 	color: ${theme.colors.primary};
 	${(props) =>
 		!props.scroll_active &&

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { HomeWrapper, ThreeColItem, OurHouse } from './style/Home.style';
 import HeroImg from '../../Assets/Home/hero.jpg';
-import PlaceholderImg from '../../Assets/Home/placeholder.jpg';
+import SzallasunkrolImg from '../../Assets/Home/szallasunkrol.jpg';
 import HaromagyasImg from '../../Assets/Home/haromagyas.jpg';
 import NegyagyasImg from '../../Assets/Home/negyagyas.jpg';
 import OtagyasImg from '../../Assets/Home/otagyas.jpg';
@@ -79,7 +79,7 @@ const Home = () => {
 					<Grid container spacing={2}>
 						<Grid item xs={12} sm={6}>
 							<div className='crop-top-right'>
-								<img src={PlaceholderImg} alt='' />
+								<img src={SzallasunkrolImg} alt='' />
 							</div>
 						</Grid>
 						<Grid item xs={12} sm={6}>
@@ -104,7 +104,7 @@ const Home = () => {
 								síkképernyős TV-vel rendelkezik. A legtöbb szoba
 								légkondicionált, ingyenes WIFI áll a vendégek rendelkezésére a
 								teljes vendégház területén. Eger történelmi belvárosa 800
-								méterre található, 5 perces kellemes sétával megközelíthet.
+								méterre található, 5 perces kellemes sétával megközelíthető.
 							</div>
 						</Grid>
 					</Grid>

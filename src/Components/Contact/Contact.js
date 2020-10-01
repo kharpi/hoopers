@@ -25,6 +25,7 @@ import NavbarContext from '../../Context/Navbar/navbarContext';
 const Contact = () => {
 	const navbarContext = React.useContext(NavbarContext);
 	const [sending, setSending] = useState(false);
+	const [sent, setSent] = useState(false);
 	const { set_active } = navbarContext;
 	React.useEffect(() => {
 		set_active(4);
@@ -98,6 +99,7 @@ const Contact = () => {
 									});
 									if (res.status === 200) {
 										setSending(false);
+										setSent(true);
 										actions.setSubmitting(false);
 									}
 								} catch (error) {
@@ -178,6 +180,8 @@ const Contact = () => {
 														üzenet küldése &nbsp;
 														<SendRoundedIcon />
 													</>
+												) : sent ? (
+													'Üzeneted megkaptuk!'
 												) : (
 													<CircularProgress />
 												)}
