@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { HomeWrapper, ThreeColItem, OurHouse } from './style/Home.style';
 import HeroImg from '../../Assets/Home/hero.jpg';
 import PlaceholderImg from '../../Assets/Home/placeholder.jpg';
@@ -13,8 +13,15 @@ import KitchenIcon from '@material-ui/icons/Kitchen';
 import WifiIcon from '@material-ui/icons/Wifi';
 import Box from '../Global/UI/Box';
 import { theme } from '../../theme';
+import NavbarContext from '../../Context/Navbar/navbarContext';
 
 const Home = () => {
+	const navbarContext = useContext(NavbarContext);
+	const { set_active } = navbarContext;
+	React.useEffect(() => {
+		set_active(1);
+		//eslint-disable-next-line
+	}, []);
 	return (
 		<HomeWrapper>
 			<Hero
@@ -116,7 +123,7 @@ const Home = () => {
 								háromágyas szoba kínálatunkat, és azok felszereltségét!
 							</div>
 							<Button
-								cta='szobaink'
+								cta='/szobaink'
 								btn_txt='Megnézem'
 								type='secondary'
 								section='1'
@@ -134,7 +141,7 @@ const Home = () => {
 								ideális, négyágyas szoba kínálatunkat és azok felszereltségét!
 							</div>
 							<Button
-								cta='szobaink'
+								cta='/szobaink'
 								btn_txt='Megnézem'
 								type='secondary'
 								section='2'
@@ -152,7 +159,7 @@ const Home = () => {
 								ideális, ötágyas szoba kínálatunkat és azok felszereltségét!
 							</div>
 							<Button
-								cta='szobaink'
+								cta='/szobaink'
 								btn_txt='Megnézem'
 								type='secondary'
 								section='3'

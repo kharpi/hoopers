@@ -20,9 +20,16 @@ import Box from '../Global/UI/Box';
 import { theme } from '../../theme';
 import Hero from '../Global/Hero/Hero';
 import HeroImg from '../../Assets/Home/hero.jpg';
+import NavbarContext from '../../Context/Navbar/navbarContext';
 
 const Contact = () => {
+	const navbarContext = React.useContext(NavbarContext);
 	const [sending, setSending] = useState(false);
+	const { set_active } = navbarContext;
+	React.useEffect(() => {
+		set_active(4);
+		//eslint-disable-next-line
+	}, []);
 
 	const MuiTheme = createMuiTheme({
 		typography: {
